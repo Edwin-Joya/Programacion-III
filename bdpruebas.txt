@@ -6,4 +6,4 @@ insert into clientes values('2','Edwin Osmin','8');
 insert into clientes values('3','Alan Derk','10');
 insert into clientes values('4','Génesis Scarlet','7');
 
-insert
+123
