@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparación de rostros</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+    <h1>Comparación de rostros</h1>
+    <p>{{ message }}</p>
+
+    <h2>Subir imagen</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image">
+        <br>
+        <input type="submit" value="Comparar">
+    </form>
+
+    <h2>Imagen 1</h2>
+    <img src="image1.jpg" alt="Imagen 1" width="300" height="200">
+
+    <h2>Imagen subida</h2>
+    {% if image_data %}
+    <img src="{{ image_data }}" alt="Imagen subida" width="300" height="200">
+    {% endif %}
+</body>
+</html>
